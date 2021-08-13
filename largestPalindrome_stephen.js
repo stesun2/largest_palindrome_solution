@@ -37,15 +37,15 @@ exports.getLargestPalindrome = (N) => {
     for (let j = blah; j < foo; j++) {
 
       // check if the product is a palindrome
-      if (isPalindrome(i * j) && (i * j > largestPalindrome)) {
-        largestPalindrome = i * j;
+      if ((i * j > largestPalindrome)) {
+        // largestPalindrome = i * j;
 
         // check if it's larger than our largest palindrome
-        // if (i * j > largestPalindrome) {
+        if (isPalindrome(i * j)) {
                   
-        //   // update largest palindrome
-        //   largestPalindrome = i * j;
-        // }
+          // update largest palindrome
+          largestPalindrome = i * j;
+        }
       }
     }
   }
@@ -55,7 +55,7 @@ exports.getLargestPalindrome = (N) => {
 }
 
 // input
-const N = 3;
+const N = 5;
 // CHALLENGE: Can you optimize the algorithm above so that works for input values N=4, N=5, N=6 in a "reasonable" amount of time?
 
 // N=2, correct output = 9009
